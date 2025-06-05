@@ -99,9 +99,9 @@ function cargarVideo_flexible(ruta, ancho, largo, posicionX, posicionY, backgrou
 function cargarWebp_1(ruta){
 	let cargarGif = $('<div></div>').css({
 		// Definir el ancho del cuadrado en 100 píxeles
-		width: '70%',
+		width: '91%',
 		// Definir la altura del cuadrado en 100 píxeles
-		height: '55%',
+		height: '35%',
 		// Asignar el fondo rojo al cuadrado
 		background: `url(${ruta}) no-repeat center center`,
 		backgroundSize: 'cover',
@@ -109,10 +109,10 @@ function cargarWebp_1(ruta){
 		// Posicionar el cuadrado de forma absoluta dentro del contenedor
 		position: 'absolute',
 		// Colocar el cuadrado en la parte superior del contenedor
-		top: '70%',
+		top: '80%',
 		// border: '3px solid white',
 		// Colocar el cuadrado en la esquina izquierda del contenedor
-		left: '55%',
+		left: '50%',
 		// Asegurar que el cuadrado se superponga a otros elementos mediante un z-index alto
 		transform: 'translate(-50%,-50%)',
 		zIndex: '1000'
@@ -135,7 +135,7 @@ function cargarWebp_2(ruta){
 		// Posicionar el cuadrado de forma absoluta dentro del contenedor
 		position: 'absolute',
 		// Colocar el cuadrado en la parte superior del contenedor
-		top: '80%',
+		top: '78%',
 		// border: '3px solid white',
 		// Colocar el cuadrado en la esquina izquierda del contenedor
 		left: '52%',
@@ -671,17 +671,18 @@ function addPage(page, book) {
 				else if(flag_responsivo == true){
 					webp = cargarWebp_2(lista_webp[0]);
 					element.append(webp);
+					
 				}
 			}
-			else if(page == 35){
+			else if(page == 17){
 				if(flag_responsivo == false){
 					// andriid
-					webp = cargarWebp_2(lista_webp_android[1]);
+					webp = cargarWebp_1(lista_webp_android[1]);
 					element.append(webp);
 				}
 				// pc
 				else if(flag_responsivo == true){
-					webp = cargarWebp_2(lista_webp[1]);
+					webp = cargarWebp_1(lista_webp[1]);
 					element.append(webp);
 				}
 			}
