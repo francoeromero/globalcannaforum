@@ -793,7 +793,7 @@ function loadPage(page, pageElement) {
 			let contenedor = $('<div></div>').css({
 				width: '70%',
 				height: '50%',
-				bottom:40,
+				bottom:0,
 				right:60,
 				position:'absolute',
 				background: 'rgba(0,0,0,0)',
@@ -803,6 +803,7 @@ function loadPage(page, pageElement) {
 				alignItems: 'center', // Centra verticalmente el contenido
 				cursor: 'pointer',
 			}).addClass('testeando')
+
 			let texto = $('<p></p>').text('CLICK PARA REPRODUCIR').css({
 				color: 'black',
 				fontSize: '20px',
@@ -824,12 +825,12 @@ function loadPage(page, pageElement) {
 			pageElement.append(contenedor);
 		}
 	}
-	else if(page == 33 && /iPhone/i.test(navigator.userAgent)){
+	else if(page == 17 && /iPhone/i.test(navigator.userAgent)){
 		if(flag_responsivo == false){
 			let contenedor = $('<div></div>').css({
 				width: '70%',
 				height: '50%',
-				bottom:40,
+				bottom: -22,
 				right:60,
 				position:'absolute',
 				background: 'rgba(0,0,0,0)',
