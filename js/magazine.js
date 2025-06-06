@@ -819,11 +819,16 @@ function loadPage(page, pageElement) {
 			});
 			contenedor.append(texto);
 
-
 			contenedor.click(function() {
 				createVideoElement('./video/0.mp4');
+				// createAFrame360Scene('./video/360-final.jpg');
+
 			});
+
 			pageElement.append(contenedor);
+
+
+			
 		}
 	}
 	else if(page == 14 && /iPhone/i.test(navigator.userAgent)){
@@ -861,13 +866,14 @@ function loadPage(page, pageElement) {
 			});
 			pageElement.append(contenedor);
 		}}
-	else if(page == 35 && /iPhone/i.test(navigator.userAgent)){
+
+	else if(page == 15 && /iPhone/i.test(navigator.userAgent)){
 		if(flag_responsivo == false){
 			let contenedor = $('<div></div>').css({
-				width: '70%',
-				height: '50%',
-				bottom:40,
-				right:60,
+				width: '85%',
+				height: '30%',
+				bottom:300,
+				right:40,
 				position:'absolute',
 				background: 'rgba(0,0,0,0)',
 				zIndex: '99999999',
@@ -877,13 +883,13 @@ function loadPage(page, pageElement) {
 				cursor: 'pointer',
 				transform: 'translateY(-15%)'
 			}).addClass('testeando')
-			let texto = $('<p></p>').text('CLICK PARA REPRODUCIR').css({
-				color: 'black',
+			let texto = $('<p></p>').text('360').css({
+				color: 'rgba(0,0,0,0)',
 				fontSize: '20px',
 				fontWeight: '400',
 				userSelect: 'none',
 				textAlign: 'center',
-				background: 'rgba(255, 255, 255, 1)', // Fondo semitransparente para mejor visibilidad
+				background: 'rgba(0,0,0,0)', // Fondo semitransparente para mejor visibilidad
 				padding: '10px 20px',
 				borderRadius: '5px',
 				'font-family': "'Quicksand', sans-serif",
@@ -892,7 +898,7 @@ function loadPage(page, pageElement) {
 			contenedor.append(texto);
 
 			contenedor.click(function() {
-				createVideoElement('./video/2.mp4');
+				createAFrame360Scene('./video/interior360.png');
 			});
 			pageElement.append(contenedor);
 		}}
@@ -1192,6 +1198,68 @@ function createVideoElement(videoUrl) {
 	agregarFuncionesVideo(videoElement, closeButton, progressBar,playButton);
 	
 }
+
+// 
+// 
+// 
+// 
+function createAFrame360Scene(imageUrl) {
+    // Eliminar si ya existe un visor A-Frame
+    $('#aframe-container').remove();
+
+    // Contenedor general
+    var aframeContainer = $('<div />', {
+        id: 'aframe-container',
+        css: {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            zIndex: 9999,
+            backgroundColor: '#000',
+        }
+    });
+
+    // Crear escena A-Frame sin cursor
+    var aScene = $(`
+        <a-scene embedded>
+            <a-sky src="${imageUrl}" rotation="0 -130 0"></a-sky>
+            <a-camera wasd-controls-enabled="false"></a-camera>
+        </a-scene>
+    `).css({
+        width: '100%',
+        height: '100%'
+    });
+
+    // Botón de cierre minimalista
+    var closeButton = $('<div />', {
+        text: '✕', 
+        id: 'cerrar-aframe',
+        css: {
+            position: 'absolute',
+            top: '20px',
+            right: '30px',
+            color: 'white',
+            fontSize: '10rem',     
+         
+            cursor: 'pointer',
+            zIndex: '10000',
+            userSelect: 'none',
+        },
+        click: function () {
+            $('#aframe-container').remove();
+        }
+    });
+
+    aframeContainer.append(aScene, closeButton);
+    $('body').append(aframeContainer);
+}
+
+
+// 
+// 
+// 
 
 function agregarFuncionesVideo(videoElement, closeButton, progressBar,playButton) {
 	playButton.on("click", function() {
