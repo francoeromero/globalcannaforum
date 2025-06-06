@@ -99,7 +99,7 @@ function cargarVideo_flexible(ruta, ancho, largo, posicionX, posicionY, backgrou
 function cargarWebp_1(ruta){
 	let cargarGif = $('<div></div>').css({
 		// Definir el ancho del cuadrado en 100 píxeles
-		width: '91%',
+		width: '85%',
 		// Definir la altura del cuadrado en 100 píxeles
 		height: '35%',
 		// Asignar el fondo rojo al cuadrado
@@ -109,7 +109,7 @@ function cargarWebp_1(ruta){
 		// Posicionar el cuadrado de forma absoluta dentro del contenedor
 		position: 'absolute',
 		// Colocar el cuadrado en la parte superior del contenedor
-		top: '80%',
+		top: '79%',
 		// border: '3px solid white',
 		// Colocar el cuadrado en la esquina izquierda del contenedor
 		left: '50%',
@@ -674,7 +674,7 @@ function addPage(page, book) {
 					
 				}
 			}
-			else if(page == 17){
+			else if(page == 14){
 				if(flag_responsivo == false){
 					// andriid
 					webp = cargarWebp_1(lista_webp_android[1]);
@@ -826,13 +826,13 @@ function loadPage(page, pageElement) {
 			pageElement.append(contenedor);
 		}
 	}
-	else if(page == 17 && /iPhone/i.test(navigator.userAgent)){
+	else if(page == 14 && /iPhone/i.test(navigator.userAgent)){
 		if(flag_responsivo == false){
 			let contenedor = $('<div></div>').css({
-				width: '70%',
-				height: '50%',
-				bottom: -22,
-				right:60,
+				width: '83%',
+				height: '30%',
+				bottom: 30,
+				right:50,
 				position:'absolute',
 				background: 'rgba(0,0,0,0)',
 				zIndex: '99999999',
