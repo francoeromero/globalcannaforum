@@ -125,7 +125,7 @@ function cargarWebp_1(ruta){
 function cargarWebp_2(ruta){
 	let cargarGif = $('<div></div>').css({
 		// Definir el ancho del cuadrado en 100 píxeles
-		width: '80%',
+		width: '82%',
 		// Definir la altura del cuadrado en 100 píxeles
 		height: '35%',
 		// Asignar el fondo rojo al cuadrado
