@@ -794,7 +794,7 @@ function loadPage(page, pageElement) {
 			let contenedor = $('<div></div>').css({
 				width: '70%',
 				height: '50%',
-				bottom:0,
+				bottom:-20,
 				right:60,
 				position:'absolute',
 				background: 'rgba(0,0,0,0)',
