@@ -1253,7 +1253,7 @@ body{
     fill-opacity: 0;
     stroke-width: 8px !important;
     stroke-dasharray: 4500;
-    animation: draw 5s ease !important;
+    animation: draw 6s ease !important;
 	margin-top: 5rem;
 }
 
