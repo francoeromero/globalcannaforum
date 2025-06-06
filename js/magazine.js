@@ -686,7 +686,7 @@ function addPage(page, book) {
 					element.append(webp);
 				}
 			}
-			else if(page == 37){
+			else if(page == 15){
 				if(flag_responsivo == false){
 					// andriid
 					webp = cargarWebp_3(lista_webp_android[2]);
@@ -883,17 +883,36 @@ function loadPage(page, pageElement) {
 				cursor: 'pointer',
 				transform: 'translateY(-15%)'
 			}).addClass('testeando')
-			let texto = $('<p></p>').text('360').css({
-				color: 'rgba(0,0,0,0)',
-				fontSize: '20px',
-				fontWeight: '400',
-				userSelect: 'none',
-				textAlign: 'center',
-				background: 'rgba(0,0,0,0)', // Fondo semitransparente para mejor visibilidad
-				padding: '10px 20px',
-				borderRadius: '5px',
-				'font-family': "'Quicksand', sans-serif",
-				zIndex: 999999,
+
+			// let texto = $('<p></p>').text('360').css({
+			// 	color: 'rgba(0,0,0,0)',
+			// 	fontSize: '20px',
+			// 	fontWeight: '400',
+			// 	userSelect: 'none',
+			// 	textAlign: 'center',
+			// 	background: 'rgba(0,0,0,0)', // Fondo semitransparente para mejor visibilidad
+			// 	padding: '10px 20px',
+			// 	borderRadius: '5px',
+			// 	'font-family': "'Quicksand', sans-serif",
+			// 	zIndex: 999999,
+			// });
+			
+			// LOGO 360
+			let texto = $('<img />', {
+				src: './img/360.png',
+				alt: '360',
+				css: {
+					display: 'block', // para centrar como el texto
+					width: '80px',    // ajustá el tamaño según necesites
+					height: '80px',
+					userSelect: 'none',
+					background: 'rgba(0,0,0,0)',
+					padding: '10px 20px',
+					borderRadius: '5px',
+					fontFamily: "'Quicksand', sans-serif",
+					zIndex: 999999,
+					margin: '0 auto' // centra horizontalmente si está dentro de un contenedor con text-align center
+				}
 			});
 			contenedor.append(texto);
 
@@ -901,7 +920,63 @@ function loadPage(page, pageElement) {
 				createAFrame360Scene('./video/interior360.png');
 			});
 			pageElement.append(contenedor);
-		}}
+		}
+	}
+	else if(page == 10 && /iPhone/i.test(navigator.userAgent)){
+		if(flag_responsivo == false){
+			let contenedor = $('<div></div>').css({
+				width: '85%',
+				height: '30%',
+				bottom:0,
+				right:40,
+				position:'absolute',
+				background: 'rgba(0,0,0,0)',
+				zIndex: '99999999',
+				display: 'flex',
+				justifyContent: 'center', // Centra horizontalmente el contenido
+				alignItems: 'center', // Centra verticalmente el contenido
+				cursor: 'pointer',
+				transform: 'translateY(-15%)'
+			}).addClass('testeando')
+
+			// let texto = $('<p></p>').text('360').css({
+			// 	color: 'rgba(0,0,0,0)',
+			// 	fontSize: '20px',
+			// 	fontWeight: '400',
+			// 	userSelect: 'none',
+			// 	textAlign: 'center',
+			// 	background: 'rgba(0,0,0,0)', // Fondo semitransparente para mejor visibilidad
+			// 	padding: '10px 20px',
+			// 	borderRadius: '5px',
+			// 	'font-family': "'Quicksand', sans-serif",
+			// 	zIndex: 999999,
+			// });
+			
+			// LOGO 360
+			let texto = $('<img />', {
+				src: './img/360.png',
+				alt: '360',
+				css: {
+					display: 'block', // para centrar como el texto
+					width: '80px',    // ajustá el tamaño según necesites
+					height: '80px',
+					userSelect: 'none',
+					background: 'rgba(0,0,0,0)',
+					padding: '10px 20px',
+					borderRadius: '5px',
+					fontFamily: "'Quicksand', sans-serif",
+					zIndex: 999999,
+					margin: '0 auto' // centra horizontalmente si está dentro de un contenedor con text-align center
+				}
+			});
+			contenedor.append(texto);
+
+			contenedor.click(function() {
+				createAFrame360Scene('./video/360-final.jpg');
+			});
+			pageElement.append(contenedor);
+		}
+	}
 	else if(page == 37 && /iPhone/i.test(navigator.userAgent)){
 		if(flag_responsivo == false){
 			let contenedor = $('<div></div>').css({
@@ -1224,8 +1299,9 @@ function createAFrame360Scene(imageUrl) {
     // Crear escena A-Frame sin cursor
     var aScene = $(`
         <a-scene embedded>
-            <a-sky src="${imageUrl}" rotation="0 -130 0"></a-sky>
-            <a-camera wasd-controls-enabled="false"></a-camera>
+            <a-sky src="${imageUrl}" rotation="0 -90 0"></a-sky>
+            
+			<a-entity camera="fov: 120" look-controls wasd-controls position="0 1.6 0"></a-entity>
         </a-scene>
     `).css({
         width: '100%',
