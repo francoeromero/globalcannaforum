@@ -125,7 +125,7 @@ function cargarWebp_1(ruta){
 function cargarWebp_2(ruta){
 	let cargarGif = $('<div></div>').css({
 		// Definir el ancho del cuadrado en 100 píxeles
-		width: '82%',
+		width: '87%',
 		// Definir la altura del cuadrado en 100 píxeles
 		height: '35%',
 		// Asignar el fondo rojo al cuadrado
@@ -657,6 +657,8 @@ function addPage(page, book) {
 			}
 		}
 		/////////////////////////////////
+		/////////////////////////////////
+		/////////////////////////////////
 		// ANDROID Y PC
 		///////////////////////////////// 
 		else{
@@ -671,6 +673,15 @@ function addPage(page, book) {
 				else if(flag_responsivo == true){
 					webp = cargarWebp_2(lista_webp[0]);
 					element.append(webp);
+
+					// ////////////////
+					// ////////////////
+					// ////////////////
+					// ////////////////
+					
+					// ////////////////
+					// ////////////////
+					// ////////////////
 					
 				}
 			}
@@ -905,6 +916,7 @@ function loadPage(page, pageElement) {
 					display: 'block', // para centrar como el texto
 					width: '80px',    // ajustá el tamaño según necesites
 					height: '80px',
+					opacity:'0.9',
 					userSelect: 'none',
 					background: 'rgba(0,0,0,0)',
 					padding: '10px 20px',
@@ -960,6 +972,7 @@ function loadPage(page, pageElement) {
 					display: 'block', // para centrar como el texto
 					width: '80px',    // ajustá el tamaño según necesites
 					height: '80px',
+					opacity:'0.3',
 					userSelect: 'none',
 					background: 'rgba(0,0,0,0)',
 					padding: '10px 20px',
@@ -972,18 +985,23 @@ function loadPage(page, pageElement) {
 			contenedor.append(texto);
 
 			contenedor.click(function() {
-				createAFrame360Scene('./video/360-final.jpg');
+				createAFrame360Scene('./video/360-final-1.png');
 			});
 			pageElement.append(contenedor);
+
+
 		}
 	}
-	else if(page == 37 && /iPhone/i.test(navigator.userAgent)){
+	else if(page == 16 && /iPhone/i.test(navigator.userAgent)){
 		if(flag_responsivo == false){
+
+
+
 			let contenedor = $('<div></div>').css({
-				width: '70%',
-				height: '50%',
-				bottom:40,
-				right:60,
+				width: '85%',
+				height: '30%',
+				bottom:0,
+				right:40,
 				position:'absolute',
 				background: 'rgba(0,0,0,0)',
 				zIndex: '99999999',
@@ -993,25 +1011,49 @@ function loadPage(page, pageElement) {
 				cursor: 'pointer',
 				transform: 'translateY(-15%)'
 			}).addClass('testeando')
-			let texto = $('<p></p>').text('CLICK PARA REPRODUCIR').css({
-				color: 'black',
-				fontSize: '20px',
-				fontWeight: '400',
-				userSelect: 'none',
-				textAlign: 'center',
-				background: 'rgba(255, 255, 255, 1)', // Fondo semitransparente para mejor visibilidad
-				padding: '10px 20px',
-				borderRadius: '5px',
-				'font-family': "'Quicksand', sans-serif",
-				zIndex: 999999,
+
+			// let texto = $('<p></p>').text('360').css({
+			// 	color: 'rgba(0,0,0,0)',
+			// 	fontSize: '20px',
+			// 	fontWeight: '400',
+			// 	userSelect: 'none',
+			// 	textAlign: 'center',
+			// 	background: 'rgba(0,0,0,0)', // Fondo semitransparente para mejor visibilidad
+			// 	padding: '10px 20px',
+			// 	borderRadius: '5px',
+			// 	'font-family': "'Quicksand', sans-serif",
+			// 	zIndex: 999999,
+			// });
+			
+			// LOGO 360
+			let texto = $('<img />', {
+				src: './img/360.png',
+				alt: '360',
+				css: {
+					display: 'block', 
+					width: '80px',    
+					height: '80px',
+					opacity:'0.3',
+					userSelect: 'none',
+					background: 'rgba(0,0,0,0)',
+					padding: '10px 20px',
+					borderRadius: '5px',
+					fontFamily: "'Quicksand', sans-serif",
+					zIndex: 999999,
+					margin: '0 auto' 
+				}
 			});
 			contenedor.append(texto);
 
-
 			contenedor.click(function() {
-				createVideoElement('./video/3.mp4');
+				createAFrame360Scene('./video/360-final-2.png');
 			});
 			pageElement.append(contenedor);
+
+
+
+
+
 		}}
 	else if(page == 39 && /iPhone/i.test(navigator.userAgent)){
 		if(flag_responsivo == false){
