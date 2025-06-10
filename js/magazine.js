@@ -916,7 +916,7 @@ function loadPage(page, pageElement) {
 					display: 'block', // para centrar como el texto
 					width: '80px',    // ajustá el tamaño según necesites
 					height: '80px',
-					opacity:'0.9',
+					opacity:'0.6',
 					userSelect: 'none',
 					background: 'rgba(0,0,0,0)',
 					padding: '10px 20px',
@@ -972,7 +972,7 @@ function loadPage(page, pageElement) {
 					display: 'block', // para centrar como el texto
 					width: '80px',    // ajustá el tamaño según necesites
 					height: '80px',
-					opacity:'0.3',
+					opacity:'0.6',
 					userSelect: 'none',
 					background: 'rgba(0,0,0,0)',
 					padding: '10px 20px',
@@ -1033,7 +1033,7 @@ function loadPage(page, pageElement) {
 					display: 'block', 
 					width: '80px',    
 					height: '80px',
-					opacity:'0.3',
+					opacity:'0.6',
 					userSelect: 'none',
 					background: 'rgba(0,0,0,0)',
 					padding: '10px 20px',
