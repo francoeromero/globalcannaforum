@@ -901,7 +901,7 @@ function loadPage(page, pageElement) {
 				fontWeight: '400',
 				userSelect: 'none',
 				textAlign: 'center',
-				background: 'rgb(236, 67, 5)', // Fondo semitransparente para mejor visibilidad
+				background: '#16500a', // Fondo semitransparente para mejor visibilidad
 				padding: '10px 20px',
 				position: 'absolute',
 				right:'0',
@@ -979,7 +979,7 @@ function loadPage(page, pageElement) {
 				fontWeight: '400',
 				userSelect: 'none',
 				textAlign: 'center',
-				background: 'rgb(236, 67, 5)', // Fondo semitransparente para mejor visibilidad
+				background: '#16500a', // Fondo semitransparente para mejor visibilidad
 				padding: '10px 20px',
 				position: 'absolute',
 				left:'0',
@@ -1038,7 +1038,7 @@ function loadPage(page, pageElement) {
 				fontWeight: '400',
 				userSelect: 'none',
 				textAlign: 'center',
-				background: 'rgb(236, 67, 5)', // Fondo semitransparente para mejor visibilidad
+				background: '#16500a', // Fondo semitransparente para mejor visibilidad
 				padding: '10px 20px',
 				position: 'absolute',
 				right:'0',
