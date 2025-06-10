@@ -895,38 +895,47 @@ function loadPage(page, pageElement) {
 				transform: 'translateY(-15%)'
 			}).addClass('testeando')
 
-			// let texto = $('<p></p>').text('360').css({
-			// 	color: 'rgba(0,0,0,0)',
-			// 	fontSize: '20px',
-			// 	fontWeight: '400',
-			// 	userSelect: 'none',
-			// 	textAlign: 'center',
-			// 	background: 'rgba(0,0,0,0)', // Fondo semitransparente para mejor visibilidad
-			// 	padding: '10px 20px',
-			// 	borderRadius: '5px',
-			// 	'font-family': "'Quicksand', sans-serif",
-			// 	zIndex: 999999,
-			// });
-			
-			// LOGO 360
-			let texto = $('<img />', {
-				src: './img/360.png',
-				alt: '360',
-				css: {
-					display: 'block', // para centrar como el texto
-					width: '80px',    // ajustá el tamaño según necesites
-					height: '80px',
-					opacity:'0.6',
-					userSelect: 'none',
-					background: 'rgba(0,0,0,0)',
-					padding: '10px 20px',
-					borderRadius: '5px',
-					fontFamily: "'Quicksand', sans-serif",
-					zIndex: 999999,
-					margin: '0 auto' // centra horizontalmente si está dentro de un contenedor con text-align center
-				}
+			let texto = $('<p></p>').text('CLICK AQUI').css({
+				color: 'white',
+				fontSize: '20px',
+				fontWeight: '400',
+				userSelect: 'none',
+				textAlign: 'center',
+				background: 'rgb(236, 67, 5)', // Fondo semitransparente para mejor visibilidad
+				padding: '10px 20px',
+				position: 'absolute',
+				right:'0',
+				bottom:'0',
+				transform:'translate(20%,90%)',
+				borderRadius: '25px',
+				'font-family': "'Quicksand', sans-serif",
+				zIndex: 999999,
 			});
 			contenedor.append(texto);
+
+
+
+
+			// LOGO 360
+			// let texto = $('<img />', {
+			// 	src: './img/360.png',
+			// 	alt: '360',
+			// 	css: {
+			// 		display: 'block', 
+			// 		width: '80px',   
+			// 		height: '80px',
+			// 		opacity:'0.6',
+			// 		userSelect: 'none',
+			// 		background: 'rgba(0,0,0,0)',
+			// 		padding: '10px 20px',
+			// 		borderRadius: '5px',
+			// 		fontFamily: "'Quicksand', sans-serif",
+			// 		zIndex: 999999,
+			// 		margin: '0 auto' 
+			// 	}
+			// });
+			// contenedor.append(texto);
+
 
 			contenedor.click(function() {
 				createAFrame360Scene('./video/interior360.png');
@@ -964,23 +973,21 @@ function loadPage(page, pageElement) {
 			// 	zIndex: 999999,
 			// });
 			
-			// LOGO 360
-			let texto = $('<img />', {
-				src: './img/360.png',
-				alt: '360',
-				css: {
-					display: 'block', // para centrar como el texto
-					width: '80px',    // ajustá el tamaño según necesites
-					height: '80px',
-					opacity:'0.6',
-					userSelect: 'none',
-					background: 'rgba(0,0,0,0)',
-					padding: '10px 20px',
-					borderRadius: '5px',
-					fontFamily: "'Quicksand', sans-serif",
-					zIndex: 999999,
-					margin: '0 auto' // centra horizontalmente si está dentro de un contenedor con text-align center
-				}
+			let texto = $('<p></p>').text('CLICK AQUI').css({
+				color: 'white',
+				fontSize: '20px',
+				fontWeight: '400',
+				userSelect: 'none',
+				textAlign: 'center',
+				background: 'rgb(236, 67, 5)', // Fondo semitransparente para mejor visibilidad
+				padding: '10px 20px',
+				position: 'absolute',
+				left:'0',
+				top:'0',
+				transform:'translate(-20%,-80%)',
+				borderRadius: '25px',
+				'font-family': "'Quicksand', sans-serif",
+				zIndex: 999999,
 			});
 			contenedor.append(texto);
 
@@ -1025,23 +1032,21 @@ function loadPage(page, pageElement) {
 			// 	zIndex: 999999,
 			// });
 			
-			// LOGO 360
-			let texto = $('<img />', {
-				src: './img/360.png',
-				alt: '360',
-				css: {
-					display: 'block', 
-					width: '80px',    
-					height: '80px',
-					opacity:'0.6',
-					userSelect: 'none',
-					background: 'rgba(0,0,0,0)',
-					padding: '10px 20px',
-					borderRadius: '5px',
-					fontFamily: "'Quicksand', sans-serif",
-					zIndex: 999999,
-					margin: '0 auto' 
-				}
+			let texto = $('<p></p>').text('CLICK AQUI').css({
+				color: 'white',
+				fontSize: '20px',
+				fontWeight: '400',
+				userSelect: 'none',
+				textAlign: 'center',
+				background: 'rgb(236, 67, 5)', // Fondo semitransparente para mejor visibilidad
+				padding: '10px 20px',
+				position: 'absolute',
+				right:'0',
+				bottom:'0',
+				transform:'translate(20%,90%)',
+				borderRadius: '25px',
+				'font-family': "'Quicksand', sans-serif",
+				zIndex: 999999,
 			});
 			contenedor.append(texto);
 
